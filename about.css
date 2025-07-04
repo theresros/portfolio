@@ -1,0 +1,115 @@
+.about-section {
+  background-color: #0d0d0d;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-highlights {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.about-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: #eee;
+}
+
+.about-highlights li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Image on right */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+}
+.about-section {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: #fff;
+}
+/* About picture */
+.image-wrapper {
+  width: 160px;          /* was 130px */
+  height: 160px;
+}
+
+/* Portfolio thumbnails */
+.portfolio-card img {
+  height: 220px;         /* was 180px */
+}
+.image-content img {
+  width: 260px;          /* was 220px */
+}
+/* Main hero */
+.text-content h1 { font-size: 2.4rem; }  /* was 32 px → ~43 px */
+.text-content h2 { font-size: 2rem;  }   /* was 28 px → ~36 px */
+
+/* About & Portfolio section titles */
+.section-title,
+.about-text h2       { font-size: 2.25rem; }   /* ~40 px */
+.portfolio-info h3   { font-size: 1.35rem; }   /* ~24 px */
+
+
+.about-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
