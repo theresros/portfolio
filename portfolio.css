@@ -6,9 +6,43 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
+  font-size: 3.5rem;
+  -webkit-margin-top-collapse: 1rem;
+  color:red;
+  justify-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row; /* Row-wise */
+  justify-content: center; /* Centered horizontally */
+  gap: 150px;
+  position: fixed; /* Stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #0d0d0d; /* Optional: to ensure visibility */
+  padding: 1rem 0;
+}
+
+.nav-item {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-item:hover{
+  color: #e74c3c;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-intro {
@@ -16,6 +50,7 @@
   color: #bbb;
   margin-bottom: 2rem;
   max-width: 600px;
+  font-size: larger;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7;
@@ -50,14 +85,9 @@
 
 .portfolio-card img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
-  filter: grayscale(100%);
   transition: filter 0.4s ease;
-}
-
-.portfolio-card:hover img {
-  filter: grayscale(0%);
 }
 
 .portfolio-info {
@@ -85,6 +115,7 @@
   color: #bbb;
   line-height: 1.6;
 }
+
 .portfolio-section {
   width: 100vw;
   min-height: 100vh;
@@ -96,25 +127,29 @@
   text-align: center;
   color: #fff;
 }
+
 /* About picture */
 .image-wrapper {
-  width: 160px;          /* was 130px */
+  width: 160px;
   height: 160px;
 }
 
 /* Portfolio thumbnails */
 .portfolio-card img {
-  height: 220px;         /* was 180px */
+  height: 220px;
 }
+
 .image-content img {
-  width: 260px;          /* was 220px */
+  width: 260px;
 }
+
 /* Main hero */
-.text-content h1 { font-size: 2.4rem; }  /* was 32 px → ~43 px */
-.text-content h2 { font-size: 2rem;  }   /* was 28 px → ~36 px */
+.text-content h1 { font-size: 2.4rem; }
+.text-content h2 { font-size: 2rem; }
 
 /* About & Portfolio section titles */
 .section-title,
-.about-text h2       { font-size: 2.25rem; }   /* ~40 px */
-.portfolio-info h3   { font-size: 1.35rem; }   /* ~24 px */
+.about-text h2 { font-size: 2.25rem; }
+
+.portfolio-info h3 { font-size: 1.35rem; }
 

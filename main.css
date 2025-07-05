@@ -1,113 +1,89 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Fonts & Background */
-html {
-  font-size: 112.5%; /* Base size: 18px */
-}
-
-@media (min-width: 1200px) {
-  html { font-size: 118.75%; } /* 19px on wide screens */
-}
-
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0d0d0d;
   color: #fff;
-  overflow-x: hidden;
 }
 
-/* Top Navbar */
-.navbar {
-  width: 100%;
-  background-color: #111;
-  padding: 20px 40px;
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #111;
+  padding: 20px;
 }
 
 .logo {
   color: #fff;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .nav {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .nav-item {
   color: #bbb;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
-.nav-item:hover,
-.nav-item.active {
-  color: #e74c3c;
+.nav-item:hover{
+  color:#e74c3c;
 }
 
-/* Main Content */
 .main-content {
-  padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
+  flex-grow: 1;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
-/* Intro Section */
 .intro {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: 60px;
-  text-align: left;
 }
 
 .text-content h1 {
-  font-size: 2.4rem;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .text-content h2 {
-  font-size: 2rem;
+  font-size: 28px;
   margin-bottom: 20px;
   color: #e74c3c;
 }
 
 .text-content p {
-  font-size: 1.1rem;
-  max-width: 550px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: #ccc;
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 .download-btn {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 10px 20px;
   background-color: #e74c3c;
   color: white;
-  border-radius: 30px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
   transition: background 0.3s;
 }
 
@@ -115,90 +91,36 @@ body {
   background-color: #c0392b;
 }
 
-/* Image */
 .image-content img {
-  width: 260px;
+  width: 100px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(231, 76, 60, 0.2);
-  transition: transform 0.3s ease;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-.image-content img:hover {
-  transform: scale(1.05);
+.image-wrapper::before,
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid red;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-content p {
-    text-align: center;
-    margin: 0 auto 30px;
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-content {
-    padding: 120px 20px 50px;
-  }
-}
-.navbar {
-  width: 100%;
-  background-color: #111;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
+.image-wrapper::before {
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  left: 0;
+  border-right: none;
+  border-bottom: none;
 }
 
-.logo {
-  color: #fff;
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.nav {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-}
-.nav {
-  display: flex;
-  gap: 200px; /* Increased from 30px */
-  justify-content: center;
-}
-.navbar {
-  width: 100%;
-  background-color: #bf1c1c;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  position: fixed;
-  top: 20px; /* 🔁 add this to lower it a bit */
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 12px; /* Optional: smooth rounded nav */
-  margin: 0 auto;
-  max-width: 90%;
+.image-wrapper::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
 }
