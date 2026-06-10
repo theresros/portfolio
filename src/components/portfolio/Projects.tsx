@@ -28,7 +28,7 @@ const projects = [
     tech: ["React", "Tailwind CSS", "FastAPI", "WebSockets", "Groq LLaMA", "Chart.js"],
     cat: ["AI Projects", "Full Stack"],
     github: "https://github.com/add-win/Quick-Care.git",
-    demo: "quick-care-one.vercel.app",
+    demo: "https://quick-care-one.vercel.app",
     features: [
       "AI caregiver assignment",
       "Patient risk monitoring",
@@ -38,7 +38,7 @@ const projects = [
     ],
   },
   {
-    name: "Mathrua AI",
+    name: "Quick AI",
     desc:
       "Comprehensive AI productivity suite that combines content generation, image processing, and resume analysis tools into a unified intelligent workspace.",
     tech: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS", "AI APIs"],

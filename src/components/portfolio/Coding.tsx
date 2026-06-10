@@ -6,6 +6,7 @@ const profiles = [
   { icon: Terminal, name: "HackerRank", stat: "20+", label: "Challenges", color: "text-primary" },
   { icon: Brain, name: "GeeksforGeeks", stat: "20+", label: "Problems", color: "text-primary" },
   { icon: Github, name: "GitHub", stat: "10+", label: "Repositories", color: "text-primary" },
+  { icon: Brain, name: "takeUforward", stat: "50+", label: "Solved", color: "text-primary" },
 ];
 
 export function Coding() {
